@@ -85,11 +85,11 @@ class TestBoard {
         board.initializeBoard();
 
         // Make a move on an invalid cell (out of bounds)
-        boolean result = board.makeMove(-1, 0, 'X'); // Row is out of bounds
+        boolean result = board.makeMove(-1, 0, 'S'); // Row is out of bounds
         assertFalse(result);
 
         // Make a move on an invalid cell (already occupied)
-        board.makeMove(0, 0, 'X');
+        board.makeMove(0, 0, 'S');
         result = board.makeMove(0, 0, 'O'); // Cell is already occupied
         assertFalse(result);
     }
